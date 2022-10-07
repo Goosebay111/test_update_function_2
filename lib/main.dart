@@ -48,5 +48,5 @@ void main() {
 
   printHierarchy(deletedHierarchy2);
   // printHierarchy(updatedHierarchy);
-  // printHierarchy(newFamilyTree);
+  printHierarchy(newFamilyTree);
 }
