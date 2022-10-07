@@ -3,21 +3,20 @@ import 'package:test_update_function_2/helper_functions.dart';
 import 'package:test_update_function_2/model_nested_class.dart';
 import 'package:test_update_function_2/setup_data.dart';
 
-//todo: implement undo/redo because these items are storable in a list.
 void main() {
   NestedClass newFamilyTree = initializeFamilyTree();
 
-  final deleted1 = deleteUpdate(object: children1, hierarchy: newFamilyTree);
+  final deleted1 = delete(object: children1, hierarchy: newFamilyTree);
 
-  final deleted2 = deleteUpdate(object: children2, hierarchy: deleted1);
+  final deleted2 = delete(object: children2, hierarchy: deleted1);
 
-  final deleted3 = deleteUpdate(object: children3, hierarchy: deleted2);
+  final deleted3 = delete(object: children3, hierarchy: deleted2);
 
-  final deleted4 = deleteUpdate(object: children4, hierarchy: deleted3);
+  final deleted4 = delete(object: children4, hierarchy: deleted3);
 
-  final deleted5 = deleteUpdate(object: children5, hierarchy: deleted4);
+  final deleted5 = delete(object: children5, hierarchy: deleted4);
 
-  final deleted6 = deleteUpdate(object: children6, hierarchy: deleted5);
+  final deleted6 = delete(object: children6, hierarchy: deleted5);
 
   List<NestedClass> deletedList = [
     deleted1,
@@ -32,5 +31,5 @@ void main() {
     printHierarchy(deletedList[i], 'Deleted:$i');
   }
 
-  
+  printHierarchy(newFamilyTree, 'New Family Tree');
 }

@@ -3,17 +3,17 @@ import 'package:test_update_function_2/model_nested_class.dart';
 var familyTree = const NestedClass(
     name: 'Family Tree', surname: 'Lineage', age: 500, children: []);
 var greatGrandParents = const NestedClass(
-    name: 'Great Grand Parents 1', surname: 'Surname', age: 100, children: []);
+    name: 'Great Grand Parents 1', surname: 'Surname', age: 70, children: []);
 var grandParents1 = const NestedClass(
     name: 'Grand Parents 1', surname: 'Surname', age: 50, children: []);
 var grandParents2 = const NestedClass(
     name: 'Grand Parents 2', surname: 'Surname', age: 50, children: []);
 var parents1 = const NestedClass(
-    name: 'Parents 1', surname: 'Surname', age: 25, children: []);
+    name: 'Parents 1', surname: 'Surname', age: 30, children: []);
 var parents2 = const NestedClass(
-    name: 'Parents 2', surname: 'Surname', age: 25, children: []);
+    name: 'Parents 2', surname: 'Surname', age: 30, children: []);
 var parents3 = const NestedClass(
-    name: 'Parents 3', surname: 'Surname', age: 25, children: []);
+    name: 'Parents 3', surname: 'Surname', age: 30, children: []);
 var children1 = const NestedClass(
     name: 'Children 1', surname: 'Surname', age: 10, children: []);
 var children2 = const NestedClass(

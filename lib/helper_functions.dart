@@ -1,8 +1,8 @@
 import 'dart:developer';
 
 import 'package:test_update_function_2/model_nested_class.dart';
-import 'package:test_update_function_2/modifier.dart';
 
+/// useful for printing the hierarchy
 void printHierarchy(NestedClass updatedHierarchy, String title) {
   log('=====================');
   log('Updated: $title');
@@ -10,7 +10,7 @@ void printHierarchy(NestedClass updatedHierarchy, String title) {
   log('=====================');
 }
 
-// make a toJson function for the class that is independent of the freezed package.
+/// make a toJson function for the class that is independent of the freezed package.
 extension NestedClassToJson on NestedClass {
   Map<String, dynamic> toJson() {
     return {
@@ -24,7 +24,7 @@ extension NestedClassToJson on NestedClass {
   }
 }
 
-// make a fromJson function for the class that is independent of the freezed package.
+/// make a fromJson function for the class that is independent of the freezed package.
 copyFromJson(Map<String, dynamic> json) {
   return NestedClass(
       name: json['name'],
