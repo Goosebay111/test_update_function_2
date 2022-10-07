@@ -1,6 +1,6 @@
 import 'package:test_update_function_2/model_nested_class.dart';
 
-var familyTree = const NestedClass(
+var familyHierarchy = const NestedClass(
     name: 'Family Tree', surname: 'Lineage', age: 500, children: []);
 var greatGrandParents = const NestedClass(
     name: 'Great Grand Parents 1', surname: 'Surname', age: 70, children: []);
@@ -27,7 +27,7 @@ var children5 = const NestedClass(
 var children6 = const NestedClass(
     name: 'Children 6', surname: 'Surname', age: 10, children: []);
 
-NestedClass initializeFamilyTree() {
+NestedClass loadFamilyTree() {
   var newParents1 = parents1.copyWith(children: [
     children1,
     children2,
@@ -51,7 +51,7 @@ NestedClass initializeFamilyTree() {
     newGrandParents1,
     newGrandParents2,
   ]);
-  var newFamilyTree = familyTree.copyWith(children: [
+  var newFamilyTree = familyHierarchy.copyWith(children: [
     newGreatGrandParents,
   ]);
   return newFamilyTree;
