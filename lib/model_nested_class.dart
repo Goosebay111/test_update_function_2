@@ -1,3 +1,5 @@
+/// https://youtu.be/v5bfidqOY10
+
 import 'dart:developer';
 
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -24,4 +26,3 @@ class NestedClass with _$NestedClass {
   factory NestedClass.initial() => const NestedClass(
       name: 'Family Tree', surname: 'Lineage', age: 500, children: []);
 }
-
