@@ -27,29 +27,32 @@ void main() {
     newParents2,
     newParents3,
   ]);
+
+  var newGrandParents2 = grandParents2.copyWith(children: [
+  ]);
   // make a new variable called newGreatGrandParents that has all of the grand parents as children
   var newGreatGrandParents = greatGrandParents.copyWith(children: [
     newGrandParents1,
-    grandParents2,
+    newGrandParents2,
   ]);
   // make a new variable called newFamilyTree which has familyTree and all the others as a children and children of children
   var newFamilyTree = familyTree.copyWith(children: [
     newGreatGrandParents,
   ]);
 
-  final updatedHierarchy = nestedUpdate(
-    modifier: ModifyName(),
-    object: children6,
-    hierarchy: newFamilyTree,
-  );
+  // final updatedHierarchy = nestedUpdate(
+  //   modifier: ModifyName(),
+  //   object: newGreatGrandParents,
+  //   hierarchy: newFamilyTree,
+  // );
 
   final deletedHierarchy2 = deleteUpdate(
     modifier: ModifyBlank(),
-    object: children5,
+    object: newParents1,
     hierarchy: newFamilyTree,
   );
 
-  printHierarchy(deletedHierarchy2);
-  // printHierarchy(updatedHierarchy);
+ printHierarchy(deletedHierarchy2);
+ // printHierarchy(updatedHierarchy);
   // printHierarchy(newFamilyTree);
 }

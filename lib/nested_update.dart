@@ -16,11 +16,5 @@ NestedClass nestedUpdate({
     mappedHierarchy[modifier.key.name] = modifier.value();
   }
   NestedClass updatedNode = copyFromJson(mappedHierarchy);
-  return updatedNode.copyWith(
-    children: [
-      for (var child in hierarchy.children)
-        // recursive call.
-        nestedUpdate(modifier: modifier, object: object, hierarchy: child),
-    ],
-  );
+  return updateHierarchy(updatedNode, modifier, object, nestedUpdate);
 }
