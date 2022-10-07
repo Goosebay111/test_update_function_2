@@ -3,9 +3,9 @@ import 'dart:developer';
 import 'package:test_update_function_2/model_nested_class.dart';
 import 'package:test_update_function_2/modifier.dart';
 
-void printHierarchy(NestedClass updatedHierarchy) {
+void printHierarchy(NestedClass updatedHierarchy, String title) {
   log('=====================');
-  log('Updated: ');
+  log('Updated: $title');
   updatedHierarchy.printNames();
   log('=====================');
 }
@@ -36,12 +36,4 @@ copyFromJson(Map<String, dynamic> json) {
       ]);
 }
 
-NestedClass updateHierarchy(
-    NestedClass hierarchy, Modifier modifier, NestedClass object, Function fx) {
-  return hierarchy.copyWith(
-    children: [
-      for (var child in hierarchy.children)
-        fx(modifier: modifier, object: object, hierarchy: child),
-    ],
-  );
-}
+
