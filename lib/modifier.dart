@@ -14,6 +14,15 @@ class ModifyAge implements Modifier {
   Function get value => calculateAge;
 }
 
+class ModifyBlank implements Modifier {
+  
+  @override
+  ClassVariables get key => ClassVariables.blank;
+
+  @override
+  Function get value => () => print('blank');
+}
+
 class ModifyName implements Modifier {
   @override
   ClassVariables get key => ClassVariables.name;

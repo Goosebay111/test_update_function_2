@@ -1,12 +1,12 @@
 import 'package:test_update_function_2/model_nested_class.dart';
+import 'package:test_update_function_2/modifier.dart';
 
 NestedClass deleteUpdate({
+  required Modifier modifier,
   required NestedClass object,
   required NestedClass hierarchy,
 }) {
-
-  NestedClass? parent = hierarchy.children.contains(object) ? hierarchy : null ;
-  //print(parent?.name ?? 'no parent');
+  NestedClass? parent = hierarchy.children.contains(object) ? hierarchy : null;
 
   if (parent != null) {
     return hierarchy.copyWith(
@@ -20,7 +20,8 @@ NestedClass deleteUpdate({
   return hierarchy.copyWith(
     children: [
       for (var child in hierarchy.children)
-        deleteUpdate(object: object, hierarchy: child),
+        deleteUpdate(modifier: modifier, object: object, hierarchy: child),
     ],
   );
 }
+

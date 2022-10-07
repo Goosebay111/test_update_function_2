@@ -1,7 +1,8 @@
 enum ClassVariables {
   name(String),
   surname(String),
-  age(int);
+  age(int),
+  blank(int);
 
   const ClassVariables(this.type);
   final Type type;

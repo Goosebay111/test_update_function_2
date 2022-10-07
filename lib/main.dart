@@ -39,14 +39,17 @@ void main() {
 
   final updatedHierarchy = nestedUpdate(
     modifier: ModifyName(),
+    object: children6,
+    hierarchy: newFamilyTree,
+  );
+
+  final deletedHierarchy2 = deleteUpdate(
+    modifier: ModifyBlank(),
     object: children5,
     hierarchy: newFamilyTree,
   );
 
-  final deletedHierarchy2 =
-      deleteUpdate(object: children5, hierarchy: newFamilyTree);
-
   printHierarchy(deletedHierarchy2);
   // printHierarchy(updatedHierarchy);
-  printHierarchy(newFamilyTree);
+  // printHierarchy(newFamilyTree);
 }
