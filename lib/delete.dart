@@ -4,9 +4,9 @@ NestedClass delete({
   required NestedClass object,
   required NestedClass hierarchy,
 }) {
-  NestedClass? parent = hierarchy.children.contains(object) ? hierarchy : null;
+  NestedClass? copiedHierarchy = hierarchy.children.contains(object) ? hierarchy : null;
 
-  if (parent != null) {
+  if (copiedHierarchy != null) {
     return hierarchy.copyWith(children: [
       for (var child in hierarchy.children)
         if (child != object) child,
@@ -20,3 +20,13 @@ NestedClass delete({
     ],
   );
 }
+
+/* 
+if (copiedHierarchy != null) {
+    var modified = [
+      for (var child in hierarchy.children)
+        if (child != object) child
+    ];
+    return hierarchy.copyWith(children: modified);
+  }
+*/
