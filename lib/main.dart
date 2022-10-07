@@ -1,5 +1,4 @@
 import 'package:test_update_function_2/setup_data.dart';
-import 'package:test_update_function_2/delete.dart';
 import 'package:test_update_function_2/helper_functions.dart';
 import 'package:test_update_function_2/modifier.dart';
 import 'package:test_update_function_2/nested_update.dart';
@@ -40,19 +39,19 @@ void main() {
     newGreatGrandParents,
   ]);
 
-  // final updatedHierarchy = nestedUpdate(
-  //   modifier: ModifyName(),
-  //   object: newGreatGrandParents,
-  //   hierarchy: newFamilyTree,
-  // );
-
-  final deletedHierarchy2 = deleteUpdate(
-    modifier: ModifyBlank(),
-    object: newParents1,
+  final updatedHierarchy = nestedUpdate(
+    modifier: ModifySurname(),
+    object: newGreatGrandParents,
     hierarchy: newFamilyTree,
   );
 
- printHierarchy(deletedHierarchy2);
- // printHierarchy(updatedHierarchy);
-  // printHierarchy(newFamilyTree);
+  // final deletedHierarchy2 = deleteUpdate(
+  //   modifier: ModifyBlank(),
+  //   object: newParents2,
+  //   hierarchy: newFamilyTree,
+  // );
+
+ //printHierarchy(deletedHierarchy2);
+ printHierarchy(updatedHierarchy);
+  printHierarchy(newFamilyTree);
 }

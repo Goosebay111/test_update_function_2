@@ -11,13 +11,16 @@ NestedClass deleteUpdate({
 
   if (parent != null) {
     return hierarchy.copyWith(
-      children: [
-        for (var child in hierarchy.children)
-          if (child != object) child,
-      ],
+      children: getChildren(hierarchy, modifier, object, () {}),
     );
   }
 
   return updateHierarchy(hierarchy, modifier, object, deleteUpdate);
 }
 
+List<NestedClass> getChildren(hierarchy, modifier, object, fx) {
+  return [
+    for (var child in hierarchy.children)
+      if (child != object) child,
+  ];
+}
