@@ -2,12 +2,10 @@ import 'dart:developer';
 
 import 'package:test_update_function_2/model_nested_class.dart';
 
-/// useful for printing the hierarchy
 void printHierarchy(NestedClass updatedHierarchy, String title) {
   log('=====================');
   log('Updated: $title');
   updatedHierarchy.printNames();
-  log('=====================');
 }
 
 /// make a toJson function for the class that is independent of the freezed package.
